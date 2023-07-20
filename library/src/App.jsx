@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Library from './components/library';
+import Home from './components/home';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <header>
           <ul>
             <li>
-              <Link to='/'>Home</Link>
+              <Link to='/Home'>Home</Link>
             </li>
           </ul>
           <ul>
@@ -19,7 +20,7 @@ function App() {
           </ul>
           <main>
             <Routes>
-              <Route path='/' />
+              <Route path='/home' element={<Home />} />
               <Route path='/library' element={<Library />} />
             </Routes>
           </main>
